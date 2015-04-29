@@ -8,6 +8,7 @@ TagManager:
   - TriggerCam2_tag
   - KillZ_tag
   - Checkpoint_tag
+  - EndGame_tag
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

@@ -57,6 +57,15 @@ public class Ball_Controller : MonoBehaviour
         //rigidbody.velocity = rigidbody.velocity + rigidbody.velocity.normalized;
 	}
 
+    void OnCollisionEnter( Collision collision )
+    {
+        if( collision.collider.CompareTag( "EndGame_tag" ) )
+        {
+            //print( "collision enter" );
+            Application.Quit();
+        }
+    }
+
     void OnCollisionStay( Collision collision )
     {
         if( collision.collider.CompareTag( "Ground_tag" ) )

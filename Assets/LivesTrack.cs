@@ -8,7 +8,7 @@ public class LivesTrack : MonoBehaviour
     public GameObject target;
 
     Text livesText;
-    int lives = 3;
+    int lives = 99;
 
     void Awake()
     {

@@ -11,11 +11,28 @@ public class Moving_Platform : MonoBehaviour
     private float distanceLimit;
     private float currentPosition;
     private bool movingPositive;
+    public bool isX;
+    public bool isY;
+    public bool isZ;
+    private float directionAxis;
+
 
 	// Use this for initialization
 	void Start ()
     {
-        minDistance = transform.position.y;
+        if( isX )
+        {
+            directionAxis = transform.position.x;
+        }
+        else if( isY )
+        {
+            directionAxis = transform.position.y;
+        }
+        else if( isZ )
+        {
+            directionAxis = transform.position.z;
+        }
+        minDistance = directionAxis;
         distanceLimit = minDistance + maxDistance;
         movingPositive = true;
 
@@ -27,7 +44,19 @@ public class Moving_Platform : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        currentPosition = transform.position.y;
+        if( isX )
+        {
+            directionAxis = transform.position.x;
+        }
+        else if( isY )
+        {
+            directionAxis = transform.position.y;
+        }
+        else if( isZ )
+        {
+            directionAxis = transform.position.z;
+        }
+        currentPosition = directionAxis;
 
         if (movingPositive)
         {
